@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
             init();
         }
-        
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
