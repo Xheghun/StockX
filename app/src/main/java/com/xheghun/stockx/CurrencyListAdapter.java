@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.xheghun.stockx.request.Datum;
 
 import java.util.List;
@@ -34,6 +35,8 @@ public class CurrencyListAdapter extends RecyclerView.Adapter<CurrencyListAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Datum datum = this.datum.get(position);
 
+        TextView profile = holder.profile;
+        profile.setText(String.valueOf(datum.getName().charAt(0)));
         TextView coin_name = holder.coinName;
         coin_name.setText(datum.getName());
         TextView coin_symbol = holder.coinSymbol;
@@ -55,10 +58,11 @@ public class CurrencyListAdapter extends RecyclerView.Adapter<CurrencyListAdapte
         TextView coinSymbol;
         TextView coinPrice;
         TextView coinMarketCap;
+        TextView profile;
 
         ViewHolder(View view) {
             super(view);
-
+            profile = itemView.findViewById(R.id.profile);
             coinName = itemView.findViewById(R.id.card_coin_name);
             coinSymbol = itemView.findViewById(R.id.card_coin_symbol);
             coinPrice = itemView.findViewById(R.id.card_coin_price);
