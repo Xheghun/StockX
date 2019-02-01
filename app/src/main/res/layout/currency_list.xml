@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="5dp">
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_coin_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko_bold"
+                        android:paddingRight="5dp"
+                        android:text="BitCoin"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/amiko"
+                        android:id="@+id/card_coin_symbol"
+                        android:layout_toEndOf="@id/card_coin_name"
+                        android:text="(BTC)"/>
+                </LinearLayout>
+
+                    <TextView
+                        android:padding="4dp"
+                        android:fontFamily="@font/amiko_semibold"
+                        android:id="@+id/card_coin_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/card_coin_name"
+                        android:text="Price: $200,000"/>
+                    <TextView
+                        android:padding="4dp"
+                        android:id="@+id/card_market_cap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko_semibold"
+                        android:layout_below="@id/card_coin_price"
+                        android:text="Market Capital: $500,000"/>
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>
